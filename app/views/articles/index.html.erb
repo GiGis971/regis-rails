@@ -3,12 +3,11 @@
 
 <% @articles.each  do |article| %>
   <h2>
-    <%= article.title %>
+    <a href="<%= article_path article %>"><%= article.title %></a>
   </h2>
+
   <p><span><small><%= article.updated_at %></small></span></p>
-  <div>
-    <%= article.body %>
-  </div>
+
 
   <hr>
 <% end %>
