@@ -6,8 +6,15 @@
     <a href="<%= article_path article %>"><%= article.title %></a>
   </h2>
 
-  <p><span><small><%= article.updated_at %></small></span></p>
+  <div>
+    <p><span><small><%= article.updated_at %></small></span></p>
 
+    <div>
+      <a href="<%= edit_article_path article %>">Editer</a></div>
+    </div>
+  </div>
 
   <hr>
 <% end %>
+
+<%= link_to 'Créer un article', new_article_path %>
