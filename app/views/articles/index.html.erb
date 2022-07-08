@@ -10,7 +10,17 @@
     <p><span><small><%= article.updated_at %></small></span></p>
 
     <div>
-      <a href="<%= edit_article_path article %>">Editer</a></div>
+      <ul>
+        <li>
+          <a href="<%= edit_article_path article %>">Editer</a>
+        </li>
+        <li>
+          <%= link_to "Delete", article_path(article), data: {
+            turbo_method: "delete",
+            turbo_confirm: "Voulez vous supprimer ?"
+          } %>
+        </li>
+      </ul>
     </div>
   </div>
 
