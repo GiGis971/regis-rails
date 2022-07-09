@@ -4,3 +4,15 @@
 <div>
   <%= sanitize @article.body %>
 </div>
+
+<hr>
+<hr>
+
+<h2>Laisser un avis</h2>
+<%= render 'comments/form' %>
+
+
+<hr>
+
+<h2>Avis</h2>
+<%= render @article.comments %>
