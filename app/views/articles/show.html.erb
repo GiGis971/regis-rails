@@ -15,4 +15,4 @@
 <hr>
 
 <h2>Avis</h2>
-<%= render @article.comments %>
+<%= render partial:'comment', collection: @article.comments %>
