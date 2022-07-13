@@ -1,5 +1,6 @@
 <h1><%= @article.title %></h1>
 <p><small><%= @article.updated_at %></small></p>
+<p><small><%= @article.status %></small></p>
 
 <div>
   <%= sanitize @article.body %>
@@ -8,11 +9,12 @@
 <hr>
 <hr>
 
-<h2>Laisser un avis</h2>
-<%= render 'comments/form' %>
-
-
-<hr>
-
 <h2>Avis</h2>
 <%= render partial:'comment', collection: @article.comments %>
+<small>
+  <%= Comment.public_count %>
+</small>
+<hr>
+
+<h2>Laisser un avis</h2>
+<%= render 'comments/form' %>

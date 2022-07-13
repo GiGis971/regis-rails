@@ -1,5 +1,6 @@
+
+<% if !comment.archived? %>
 <div>
-  article
   <p>
     <strong><%= comment.author %></strong>
     -
@@ -11,3 +12,4 @@
     </p>
   </blockquote>
 </div>
+<% end %>
