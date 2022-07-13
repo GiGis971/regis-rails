@@ -10,7 +10,7 @@
 <hr>
 
 <h2>Avis</h2>
-<%= render partial:'comment', collection: @article.comments %>
+<%= render @article.comments %>
 <small>
   <%= Comment.public_count %>
 </small>
